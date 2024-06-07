@@ -45,12 +45,12 @@ endif::[]
 
 === De la solution...
 
-* LAST NAME : DOE
-* First name : John
+* LAST NAME : Chauvière
+* First name : Romy
 * TD group : 
 - [ ] 1
-- [x] 2
-- [ ] 3
+- [ ] 2
+- [x] 3
 - [ ] 4
 
 // == Objectives
