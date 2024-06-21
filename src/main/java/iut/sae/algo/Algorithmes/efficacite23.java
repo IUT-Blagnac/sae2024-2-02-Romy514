@@ -4,14 +4,15 @@ public class efficacite23 {
 
     public static void main(String[] args) {
         String chaine = "wwwwwwwwwwwwwwwwttowwwwwwoooo"; // Ajoutez la chaîne que vous souhaitez compresser ici
-        String Compressed = RLE(chaine); // Appel à la méthode de compression
-        System.out.println("Chaîne après compression : " + Compressed); // Affiche la chaîne compressée
-        System.out.println("Décompression : " + unRLE(Compressed)); // Affiche la chaîne après décompression
+ // Appel à la méthode de compression
+        System.out.println("Chaîne après compression : " + RLE(chaine, 30)); // Affiche la chaîne compressée
+
     }
 
     // Méthode pour compresser une chaîne en utilisant un algorithme simple de compression par comptage
     public static String RLE(String chaine) {
         String Compressed = "";
+        int cpt = 0;
         char current = chaine.charAt(0); // Premier caractère de la chaîne
         int nbcurrent = 1; // Compteur du nombre de fois où le caractère actuel se répète
         for (int i = 1; i < chaine.length(); i++) {
@@ -20,6 +21,7 @@ public class efficacite23 {
                     Compressed += Character.toString(current); // Ajoute le caractère compressé
                     Compressed += Integer.toString(nbcurrent); // Ajoute le compteur de répétitions
                     nbcurrent = 1;
+                    cpt++;
                 }
                 nbcurrent++; // Incrémente le compteur si le caractère est le même que le précédent
             } else {
@@ -27,11 +29,13 @@ public class efficacite23 {
                 Compressed += Integer.toString(nbcurrent); // Ajoute le compteur de répétitions
                 current = chaine.charAt(i); // Met à jour le caractère actuel
                 nbcurrent = 1; // Réinitialise le compteur
+                cpt++;
             }
         }
         // Ajoute le dernier caractère compressé et son compteur
         Compressed += Character.toString(current);
         Compressed += Integer.toString(nbcurrent);
+        System.out.println(cpt + "lol");
         return Compressed; // Retourne la chaîne compressée
     }
 

@@ -1,6 +1,6 @@
 package iut.sae.algo;
 
-import iut.sae.algo.Algorithmes.efficacite68;
+import iut.sae.algo.Algorithmes.efficacite23;
 
 import java.util.Scanner;
 
@@ -29,7 +29,7 @@ public class RLERecursifConsole {
         System.out.println("Itérations : " + iterations);
 
         long startTime = System.currentTimeMillis();
-        System.out.println("Sortie : " + efficacite68.RLE(in, iterations));
+        System.out.println("Sortie : " + efficacite23.RLE(in, iterations));
         long endTime = System.currentTimeMillis();
         long executionTime = endTime - startTime;
 
