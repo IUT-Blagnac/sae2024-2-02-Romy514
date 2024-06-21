@@ -1,10 +1,12 @@
 package iut.sae.algo;
 
+import iut.sae.algo.Algorithmes.efficacite68;
+
 import java.util.Scanner;
 
 public class RLERecursifConsole {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws AlgoException {
         String in = "";
         int iterations = 1;
 
@@ -23,18 +25,14 @@ public class RLERecursifConsole {
             scanner.close();
         }
 
-        try {
-            System.out.println("Entrée : " + in);
-            System.out.println("Itérations : " + iterations);
+        System.out.println("Entrée : " + in);
+        System.out.println("Itérations : " + iterations);
 
-            long startTime = System.currentTimeMillis();
-            System.out.println("Sortie : " + Algo.RLEIteration(in, iterations));
-            long endTime = System.currentTimeMillis();
-            long executionTime = endTime - startTime;
+        long startTime = System.currentTimeMillis();
+        System.out.println("Sortie : " + efficacite68.RLE(in, iterations));
+        long endTime = System.currentTimeMillis();
+        long executionTime = endTime - startTime;
 
-            System.out.println("Temps d'exécution en millisecondes : " + executionTime);
-        } catch (AlgoException e) {
-            System.err.println("Erreur lors de la transformation");
-        }
+        System.out.println("Temps d'exécution en millisecondes : " + executionTime);
     }
 }

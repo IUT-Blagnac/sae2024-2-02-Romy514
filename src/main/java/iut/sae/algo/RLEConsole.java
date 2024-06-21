@@ -1,6 +1,5 @@
 package iut.sae.algo;
 
-import java.time.Duration;
 import java.time.Instant;
 import java.util.Scanner;
 
@@ -22,7 +21,7 @@ public class RLEConsole {
         }
         System.out.println("Entrée : " + in);
         long startTime = System.currentTimeMillis();
-        System.out.println("Sortie : " + Algo.RLESobre(in));
+        System.out.println("Sortie : " + Algo.RLE(in));
         Instant end = Instant.now();
         long endTime = System.currentTimeMillis();
         long executionTime = endTime - startTime;
