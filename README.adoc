@@ -185,20 +185,22 @@ WARNING: Les répertoires et fichiers existants devront être complétés et mis
 
 Voici les pré-requis pour exécuter nos codes d'évaluation.
 
-- Java v.x.y.z
-- ...
+- Java 1.8.
+- Python 3.12
 
 === Reproductibilité
 
 - Pour reproduire nos analyses :
-. Installez X
-. Lancez Y
-. ...
+. Placer le fichier à tester dans le même répertoire que le fichier de test
+. Importer le fichier à analyser dans le fichier de test 
+. Remplacer les appels à RLE par nom_du_fichier.RLE(message, [nombre_iterations])
+. Exécuter le fichier de test 
+
+[facultatif] lorsque qu'on ne teste pas le temps ou la récursivité
 
 === Références
 
-- link:http://xyz[Mon super outil XYZ]
-- ...
+- Pour les tests : JUnit (Java), PyUnit (Python) 
 
 == Généralités, notation de la SAÉ et résultat du concours
 
